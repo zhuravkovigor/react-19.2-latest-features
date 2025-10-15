@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/ErrorBoundary/index.tsx","./src/components/Loader/index.tsx","./src/components/PostForm/index.tsx","./src/components/PostsList/index.tsx","./src/services/post.ts","./src/types/post.ts","./src/utils/try-catch.ts"],"version":"5.9.3"}

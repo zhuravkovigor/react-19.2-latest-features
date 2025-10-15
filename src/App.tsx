@@ -1,5 +1,6 @@
 import { Suspense, useState } from "react";
 import "./App.css";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Loader from "./components/Loader";
 import PostsForm from "./components/PostForm";
 import PostsList from "./components/PostsList";
@@ -20,9 +21,11 @@ function App() {
 
       <PostsForm onPostAdded={handleRefresh} />
 
-      <Suspense fallback={<Loader />}>
-        <PostsList postsPromise={postsPromise} />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<Loader />}>
+          <PostsList postsPromise={postsPromise} />
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 }
